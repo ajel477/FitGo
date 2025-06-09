@@ -1,0 +1,358 @@
+/* Workout page styles with Dashboard-inspired design */
+:root {
+  --primary-color: #00acc1;
+  --primary-light: #e0f7fa;
+  --secondary-color: #7e57c2;
+  --tertiary-color: #ff5722;
+  --success-color: #4caf50;
+  --warning-color: #ff9800;
+  --danger-color: #f44336;
+  --light-gray: #f8f9fa;
+  --medium-gray: #e9ecef;
+  --dark-gray: #6c757d;
+  --text-primary: #333;
+  --text-secondary: #666;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --border-radius: 16px;
+  --border-radius-sm: 8px;
+}
+
+body {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.workout-background {
+  background-color: #f8fafc;
+}
+
+.workout-container {
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+.workout-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.workout-card {
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+.workout-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.workout-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.workout-description {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.workout-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #888;
+  font-size: 0.875rem;
+}
+
+.category-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.category-filter {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 0.75rem;
+  background-color: #FFFFFF;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.category-btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  background-color: transparent;
+  color: #4b5563;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.category-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.category-btn.active {
+  background: linear-gradient(90deg, #00acc1, #4f46e5);
+  color: white;
+}
+
+.quick-start {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quick-start-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.quick-start-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.content-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.workout-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: var(--text-primary);
+  background-color: #f8fafc;
+}
+
+.workout-header {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4f46e5;
+  margin-bottom: 0.5rem;
+}
+
+.page-description {
+  color: #6b7280;
+  margin-top: 0.25rem;
+  font-size: 1rem;
+}
+
+/* Workouts Grid */
+.workouts-container {
+  width: 100%;
+  display: block;
+}
+
+.workouts-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .workouts-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .workouts-grid {
+    grid-template-columns: 1fr 1fr 1fr !important;
+  }
+}
+
+.workout-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.workout-time {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.workout-icon {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.workout-duration {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.workout-difficulty {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.workout-difficulty.beginner {
+  background-color: #E9F7EF;
+  color: #166534;
+}
+
+.workout-difficulty.intermediate {
+  background-color: #FEF9C3;
+  color: #854d0e;
+}
+
+.workout-difficulty.advanced {
+  background-color: #FECACA;
+  color: #991b1b;
+}
+
+/* Quick Start Section */
+.quick-start-section {
+  background-color: #FFFFFF;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin-top: 2rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid #F3F4F6;
+  padding-bottom: 0.5rem;
+}
+
+.quick-start-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .quick-start-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.quick-start-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #F9FAFB;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.quick-start-card:hover {
+  background-color: #F3F4F6;
+  transform: translateY(-2px);
+}
+
+.quick-start-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  margin-right: 0;
+}
+
+.quick-start-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4B5563;
+  text-align: center;
+}
+
+.refresh-button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  background-color: #f3f4f6;
+  color: #4b5563;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.refresh-button:hover {
+  background-color: #e5e7eb;
+  color: #1f2937;
+}
+
+.refresh-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.data-source-note {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.workout-category-tag {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: white;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: linear-gradient(90deg, #7e57c2, #00acc1);
+} 

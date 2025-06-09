@@ -1,0 +1,225 @@
+/* New Workout Styles */
+.workout-page {
+  background-color: #e7f0f7;
+  padding: 2rem;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+}
+
+body {
+  background-color: #e7f0f7;
+  margin: 0;
+  padding: 0;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.workout-header {
+  margin-bottom: 1.5rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4f46e5;
+  margin-bottom: 1rem;
+}
+
+/* Category Filter */
+.category-filter {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 0.75rem;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.category-btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  background-color: transparent;
+  color: #4b5563;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.category-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.category-btn.active {
+  background: linear-gradient(90deg, #00acc1, #4f46e5);
+  color: white;
+}
+
+/* Workouts Grid */
+.workouts-container {
+  width: 100%;
+}
+
+.workouts-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+/* Workout Card */
+.workout-card {
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 0.75rem;
+  width: 100%;
+}
+
+.workout-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.workout-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.workout-description {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.workout-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.workout-time {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.workout-icon {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.workout-duration {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.workout-difficulty {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.workout-difficulty.beginner {
+  background-color: #E9F7EF;
+  color: #166534;
+}
+
+.workout-difficulty.intermediate {
+  background-color: #FEF9C3;
+  color: #854d0e;
+}
+
+.workout-difficulty.advanced {
+  background-color: #FECACA;
+  color: #991b1b;
+}
+
+.workout-category-tag {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: white;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: linear-gradient(90deg, #7e57c2, #00acc1);
+}
+
+/* Quick Start Section */
+.quick-start-section {
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-top: 2rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid #F3F4F6;
+  padding-bottom: 0.5rem;
+}
+
+.quick-start-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.quick-start-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #F9FAFB;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 33%;
+}
+
+.quick-start-card:hover {
+  background-color: #F3F4F6;
+  transform: translateY(-2px);
+}
+
+.quick-start-icon {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.quick-start-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4B5563;
+  text-align: center;
+} 

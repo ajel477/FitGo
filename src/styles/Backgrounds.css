@@ -1,0 +1,136 @@
+/* 
+ * Background styles for FitGo application
+ * These styles use images from Adobe Stock or similar sources
+ * Make sure to properly license images before using in production
+ */
+
+:root {
+  --overlay-opacity: 0.8;
+  --primary-overlay: rgba(0, 0, 0, var(--overlay-opacity));
+  --light-overlay: rgba(255, 255, 255, 0.9);
+}
+
+/* General background for the app */
+.app-background {
+  background: linear-gradient(135deg, #e0f7fa 0%, #ede7f6 50%, #fff8e1 100%);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Login and Register background */
+.auth-background {
+  position: relative;
+  /* Using a dark gym background with equipment */
+  background-image: url('https://stock.adobe.com/in/images/orange-fitness-gear-including-dumbbells-water-bottle-and-resistance-bands-on-orange-background/1034526721');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.auth-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Workout page background */
+.workout-background {
+  position: relative;
+  background-image: url('../assets/backgrounds/gym-background-2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.workout-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--primary-overlay);
+  z-index: 0;
+}
+
+/* Dashboard background */
+.dashboard-background {
+  position: relative;
+  background-image: url('../assets/backgrounds/gym-background-3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.dashboard-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--primary-overlay);
+  z-index: 0;
+}
+
+/* Profile background */
+.profile-background {
+  position: relative;
+  background-image: url('../assets/backgrounds/gym-background-4.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.profile-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--primary-overlay);
+  z-index: 0;
+}
+
+/* Fitness tracker background */
+.fitness-tracker-background {
+  position: relative;
+  background-image: url('../assets/backgrounds/gym-background-5.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.fitness-tracker-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--primary-overlay);
+  z-index: 0;
+}
+
+/* Content container that sits on top of backgrounds */
+.content-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .auth-background,
+  .workout-background,
+  .dashboard-background,
+  .profile-background,
+  .fitness-tracker-background {
+    background-attachment: scroll;
+  }
+} 
